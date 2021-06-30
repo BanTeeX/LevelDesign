@@ -97,12 +97,13 @@ GameObject:
   - component: {fileID: 3691067562435892017}
   - component: {fileID: 3691067562435892016}
   - component: {fileID: 3691067562435892019}
+  - component: {fileID: 1349894845}
   m_Layer: 0
   m_Name: Portal
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &3691067562435892020
 Transform:
@@ -833,6 +834,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _portalInside: {fileID: 3691067561151717200}
+--- !u!65 &1349894845
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3691067562435892018}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.12844448, y: 0.08254384, z: 0.2}
+  m_Center: {x: -0.0012166225, y: 0.0020434132, z: 0}
 --- !u!1 &4778136695077442179
 GameObject:
   m_ObjectHideFlags: 0
@@ -876,7 +890,7 @@ Light:
   m_Type: 2
   m_Shape: 0
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Intensity: 10
+  m_Intensity: 1
   m_Range: 10
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208

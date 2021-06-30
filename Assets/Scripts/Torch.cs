@@ -7,5 +7,5 @@ public class Torch : MonoBehaviour, IInteractive
 		player.Collect(transform);
 	}
 
-	public string GetMessage() => "Press Action to collect";
+	public string GetMessage() => "Press E to collect";
 }

@@ -49,6 +49,6 @@ public class Pillar : MonoBehaviour, IInteractive
 		{
 			return string.Empty;
 		}
-		return "Press Action to put diamond";
+		return "Press E to put diamond";
 	}
 }

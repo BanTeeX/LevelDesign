@@ -8,7 +8,7 @@ public class Portal : MonoBehaviour
 
 	private void OnTriggerEnter(Collider other)
 	{
-		if (null != other.GetComponent<PlayerMovement>())
+		if (null != other.GetComponent<PlayerMovement>() && _portalInside.activeSelf)
 		{
 			Application.Quit();
 		}

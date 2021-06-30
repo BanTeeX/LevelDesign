@@ -17,7 +17,7 @@ public class Diamond : MonoBehaviour, IInteractive
 	{
 		if (isActive)
 		{
-			return "Press Action to collect";
+			return "Press E to collect";
 		}
 
 		return string.Empty;

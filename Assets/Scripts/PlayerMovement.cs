@@ -8,6 +8,7 @@ public class PlayerMovement : MonoBehaviour
 	[HideInInspector] public Transform rightHandObject;
 	[HideInInspector] public bool isLeftHandBusy;
 	[HideInInspector] public bool isRightHandBusy;
+	[HideInInspector] public bool isLocked;
 
 	[SerializeField] private float _speed;
 	[SerializeField] private float _jumpForce;
@@ -86,12 +87,15 @@ public class PlayerMovement : MonoBehaviour
 	{
 		_isGrounded = Physics.CheckSphere(_groundCheck.position, _groundCheckRadius, _layerMask) && Mathf.Abs(_rigidbody.velocity.y) < _jumpSpeedTolerance;
 
-		SetVelocity(new Vector3(_xInput * _speed, _rigidbody.velocity.y, _yInput * _speed));
-
-		if (_isGrounded && _isJumping)
+		if (!isLocked)
 		{
-			Jump(Vector3.up * _jumpForce);
-			_isJumping = false;
+			SetVelocity(new Vector3(_xInput * _speed, _rigidbody.velocity.y, _yInput * _speed));
+
+			if (_isGrounded && _isJumping)
+			{
+				Jump(Vector3.up * _jumpForce);
+				_isJumping = false;
+			}
 		}
 
 		if (Physics.Raycast(Camera.main.transform.position, Camera.main.transform.forward, out RaycastHit hitInfo, 2.5f))
